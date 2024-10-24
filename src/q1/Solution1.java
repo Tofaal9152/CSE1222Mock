@@ -25,7 +25,7 @@ class Supervisor extends Worker {
 
     @Override
     public String toString() {
-        return "Supervisor: Name = " + super.toString().split(":")[1] + ", Division = " + division;
+        return "Supervisor:" + super.toString().split(":")[1] + ", Division = " + division;
     }
 }
 
@@ -36,6 +36,6 @@ class Director extends Supervisor {
 
     @Override
     public String toString() {
-        return "Director: " + super.toString();
+        return "Director: " + super.toString().split(": ")[1];
     }
 }
